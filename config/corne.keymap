@@ -31,10 +31,10 @@
         second_layer {
             display-name = "Second";
             bindings = <
+                &kp ESC &none &none &none &none &none &none &none &none &none &none &kp DEL
+                &kp TAB &none &none &none &none &none &none &none &none &none &none &kp RET
                 &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &none
-                &none &none &none &none &none &none &none &none &none &none &none &sl 4
-                           &none &to 0 &none &none &none &none
+                           &trans &to 0 &trans &trans &to 1 &kp BSPC
             >;
         };
 
