@@ -30,7 +30,7 @@
         second_layer {
             display-name = "Second";
             bindings = <
-                &kp ESC &unicode U+00B0 &unicode U+00A8 &unicode U+00A8 &kp DLLR &kp PRCNT &kp K_VOLU &kp K_MUTE &kp UP &to 5 &kp K_CALC &kp DEL
+                &kp ESC &none &none &none &kp DLLR &kp PRCNT &kp K_VOLU &kp K_MUTE &kp UP &to 5 &kp K_CALC &kp DEL
                 &kp TAB &kp SQT &kp DQT &kp AT &kp LT &kp GT &kp K_VOLD &kp LEFT &kp DOWN &kp RIGHT &none &kp RET
                 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
                            &trans &to 0 &trans &trans &to 1 &kp BSPC
