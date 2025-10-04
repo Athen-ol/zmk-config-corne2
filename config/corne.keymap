@@ -4,51 +4,74 @@
 #include <dt-bindings/zmk/reset.h>
 
 #define BASE 0
-#define LOWER 1
-#define RAISE 2
-#define FIRSTACCENTLAYER 3
-#define SECONDACCENTLAYER 4
+#define FIRST 1
+#define SECOND 2
+#define FIRSTACCENT 3
+#define SECONDACCENT 4
 #define BLUETOOTH 5
 
 / {
-  keymap {
-    compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-    Base_layer {
-      bindings = <
-        &kp ESCAPE &kp A &kp Z &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp DEL &kp TAB &kp Q &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp M &kp RETURN &kp HOME &kp W &kp X &kp C &kp V &kp B &kp N &kp SEMICOLON &kp COMMA &kp PERIOD &kp COLON &mo FIRSTACCENTLAYER &sk RIGHT_ALT &kp SPACE &sk LEFT_CONTROL &sk LEFT_SHIFT &to LOWER &kp BACKSPACE 
-      >;
+        base_layer {
+            display-name = "Base";
+            bindings = <
+                &kp ESC   &kp A    &kp Z    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P    &kp DEL
+                &kp TAB   &kp Q    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J    &kp K    &kp L    &kp M    &kp RET
+                &kp HOME  &kp W    &kp X    &kp C    &kp V    &kp B    &kp N    &kp SEMI &kp COMMA &kp DOT  &kp COLON &mo FIRSTACCENT
+                           &sk RALT &kp SPACE &sk LCTRL &sk LSHFT &mo FIRST &kp BSPC
+            >;
+        };
+
+        first_layer {
+            display-name = "First";
+            bindings = <
+                &kp ESC &kp LBKT &kp RBKT &kp UNDER &kp LBRC &kp RBRC &kp PLUS &kp N7 &kp N8 &kp N9 &kp N0 &kp DEL
+                &kp TAB &kp BSLH &kp EXCL &kp FSLH &kp LPAR &kp RPAR &kp MINUS &kp N4 &kp N5 &kp N6 &kp DOT &kp RET
+                &kp TILDE &kp QMARK &kp HASH &kp CARET &kp AMPS &kp PIPE &kp EQUAL &kp N1 &kp N2 &kp N3 &kp ASTRK &kp SQT
+                           &trans &to BASE &trans &trans &mo SECOND &kp BSPC
+            >;
+        };
+
+        second_layer {
+            display-name = "Second";
+            bindings = <
+                &kp ESC &unicode U+00B0 &unicode U+00A8 &unicode U+00A8 &kp DLLR &kp PRCNT &kp K_VOLU &kp K_MUTE &kp UP &to BLUETOOTH &kp K_CALC &kp DEL
+                &kp TAB &kp SQT &kp DQT &kp AT &kp LT &kp GT &kp K_VOLD &kp LEFT &kp DOWN &kp RIGHT &none &kp RET
+                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+                           &trans &to BASE &trans &trans &to FIRST &kp BSPC
+            >;
+        };
+
+        firstaccent_layer {
+            display-name = "Accent 1";
+            bindings = <
+                &none &unicode U+00E0 &none &unicode U+00E9 &none &none &unicode U+00F9 &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &none
+                &none &unicode U+00E7 &none &none &none &none &none &none &none &none &none &sl SECONDACCENT
+                           &none &to BASE &none &none &none &none
+            >;
+        };
+
+        secondaccent_layer {
+            display-name = "Accent 2";
+            bindings = <
+                &none &kp AT &none &unicode U+00E8 &none &none &none &unicode U+00B5 &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &to BASE
+                           &none &to BASE &none &none &none &none
+            >;
+        };
+
+        bluetooth_layer {
+            display-name = "Bluetooth";
+            bindings = <
+                &none &none &none &none &none &none &none &none &none &none &none &none
+                &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &none &bootloader &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &none
+                           &none &to BASE &none &none &none &none
+            >;
+        };
     };
-
-    Lower_layer {
-      bindings = <
-        &kp ESCAPE &kp LEFT_BRACE &kp RIGHT_BRACE &kp UNDERSCORE &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp PLUS &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 &kp DEL &kp TAB &kp BACKSLASH &kp EXCLAMATION &kp SLASH &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp MINUS &kp NUMBER_4 &kp NUMBER_5 &kp NUMBER_6 &kp DOT &kp RETURN &kp TILDE &kp QUESTION &kp HASH &kp CARET &kp AMPERSAND &kp PIPE &kp EQUAL &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp ASTERISK &kp SINGLE_QUOTE &trans &to BASE &trans &trans &to RAISE &kp BACKSPACE 
-      >;
-    };
-
-    Raise_layer {
-      bindings = <
-        &kp ESCAPE ° ¨ ¨ &kp DOLLAR &kp PERCENT &kp K_VOLUME_UP &kp K_MUTE &kp UP &to BLUETOOTH &kp K_CALCULATOR &kp DEL &kp TAB &kp SINGLE_QUOTE &kp DOUBLE_QUOTES &kp AT_SIGN &kp LT &kp GT &kp K_VOLUME_DOWN &kp LEFT &kp DOWN &kp RIGHT &none &kp RETURN &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans &to BASE &trans &trans &to LOWER &kp BACKSPACE 
-      >;
-    };
-
-    FirstAccentLayer_layer {
-      bindings = <
-        &none à &none é &none &none &none ù &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none ç &none &none &none &none &none &none &none &mo SECONDACCENTLAYER &none &none &none &none &none &none 
-      >;
-    };
-
-    SecondAccentLayer_layer {
-      bindings = <
-        &none &kp AT_SIGN &none è &none &none &none µ &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &to BASE &none &none &none &none &none &none 
-      >;
-    };
-
-    Bluetooth_layer {
-      bindings = <
-        &none &none &none &none &none &none &none &none &none &none &none &none &bt BT_CLR &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &none &bootloader &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &to BASE &none &none &none &none 
-      >;
-    };
-
-  };
 };
