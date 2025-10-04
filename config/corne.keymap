@@ -20,7 +20,7 @@
                 &kp ESC   &kp A    &kp Z    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P    &kp DEL
                 &kp TAB   &kp Q    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J    &kp K    &kp L    &kp M    &kp RET
                 &kp HOME  &kp W    &kp X    &kp C    &kp V    &kp B    &kp N    &kp SEMI &kp COMMA &kp DOT  &kp COLON &mo FIRSTACCENT
-                           &sk RALT &kp SPACE &sk LCTRL &sk LSHFT &mo FIRST &kp BSPC
+                           &sk LALT &kp SPACE &sk LCTRL &sk LSHFT &mo FIRST &kp BSPC
             >;
         };
 
@@ -47,7 +47,7 @@
         firstaccent_layer {
             display-name = "Accent 1";
             bindings = <
-                &none &none &none &none &none &none &none &none &none &none &none &none
+                &none &à &none &é &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &sl SECONDACCENT
                            &none &to BASE &none &none &none &none
@@ -57,7 +57,7 @@
         secondaccent_layer {
             display-name = "Accent 2";
             bindings = <
-                &none &kp AT &none &none &none &none &none &none &none &none &none &none
+                &none &kp AT &none &è &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &none
                 &none &none &none &none &none &none &none &none &none &none &none &to BASE
                            &none &to BASE &none &none &none &none
