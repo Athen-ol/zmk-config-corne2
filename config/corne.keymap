@@ -28,7 +28,15 @@
             >;
         };
 
-
+        second_layer {
+            display-name = "Second";
+            bindings = <
+                &none &none &none &none &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &sl 4
+                           &none &to 0 &none &none &none &none
+            >;
+        };
 
         firstaccent_layer {
             display-name = "Accent 1";
