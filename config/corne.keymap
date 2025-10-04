@@ -37,8 +37,8 @@
         second_layer {
             display-name = "Second";
             bindings = <
-                &kp ESC &none &none &none &kp DLLR &kp PRCNT &none &none &kp UP &to BLUETOOTH &none &kp DEL
-                &kp TAB &kp SQT &kp DQT &kp AT &kp LT &kp GT &none &kp LEFT &kp DOWN &kp RIGHT &none &kp RET
+                &kp ESC &none &none &none &kp DLLR &kp PRCNT &kp K_VOLU &kp K_MUTE &kp UP &to BLUETOOTH &none &kp DEL
+                &kp TAB &kp SQT &kp DQT &kp AT &kp LT &kp GT &kp K_VOLD &kp LEFT &kp DOWN &kp RIGHT &none &kp RET
                 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
                            &trans &to BASE &trans &trans &to FIRST &kp BSPC
             >;
