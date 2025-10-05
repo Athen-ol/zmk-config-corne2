@@ -49,9 +49,9 @@
         firstaccent_layer {
             display-name = "Accent 1";
             bindings = <
-                &none  &kp fr_a_grave  &kp fr_e_grave &kp fr_e_circumflex &none &none &none &kp fr_u_grave &kp fr_i_circumflex &kp fr_o_circumflex &none &none
-                &none &none &kp fr_e_acute &none &none &none &none &kp fr_u_circumflex &kp fr_i_diaeresis &none &none &none
-                &none &none &none &kp fr_c_cedilla &none &none &none &none &none &none &none &to BASE
+                &none &kp AT &none &none &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &to BASE
                            &none &to BASE &none &none &none &none
             >;
         };
