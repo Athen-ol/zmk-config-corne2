@@ -17,6 +17,84 @@
         base_layer {
             display-name = "Base";
             bindings = <
+                &kp ESC   &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U  &kp I      &kp O    &kp P      &kp DEL
+                &kp TAB   &kp A    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J  &kp K      &kp L    &kp SEMI   &kp RET
+                &kp LGUI  &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M  &kp COMMA  &kp LS(M)  &kp DOT  &sl FIRSTACCENT
+                           &sk LALT &kp SPACE &sk LCTRL    &sk LSHFT &to FIRST &kp BSPC
+            >;
+        };
+
+        first_layer {
+            display-name = "First";
+            bindings = <
+                &kp ESC   &kp LBKT   &kp RBKT   &kp UNDER  &kp LBRC   &kp RBRC   &kp PLUS   &kp N7   &kp N8   &kp N9   &kp N0    &kp DEL
+                &kp TAB   &kp BSLH   &kp EXCL   &kp FSLH   &kp LPAR   &kp RPAR   &kp MINUS  &kp N4   &kp N5   &kp N6   &kp DOT   &kp RET
+                &kp TILDE &kp QMARK  &kp HASH   &kp CARET  &kp AMPS   &kp PIPE   &kp EQUAL  &kp N1   &kp N2   &kp N3   &kp ASTRK &kp SQT
+                           &trans &to BASE &trans    &trans &to SECOND &kp BSPC
+            >;
+        };
+
+        second_layer {
+            display-name = "Second";
+            bindings = <
+                &kp ESC   &none    &none    &none    &kp DLLR  &kp PRCNT  &kp C_VOLUME_UP    &kp C_MUTE  &kp UP     &to BLUETOOTH  &kp C_AL_CALCULATOR  &kp DEL
+                &kp TAB   &kp SQT  &kp DQT  &kp AT   &kp LT    &kp GT     &kp C_VOLUME_DOWN  &kp LEFT    &kp DOWN   &kp RIGHT      &none                &kp RET
+                &kp F1    &kp F2   &kp F3   &kp F4   &kp F5    &kp F6     &kp F7             &kp F8      &kp F9     &kp F10        &kp F11              &kp F12
+                           &trans &to BASE &trans      &trans &to FIRST &kp BSPC
+            >;
+        };
+
+        firstaccent_layer {
+            display-name = "Accent 1";
+            bindings = <
+                &none &none &none &none &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &sl SECONDACCENT
+                           &none &to BASE &none     &none &none &none
+            >;
+        };
+
+        secondaccent_layer {
+            display-name = "Accent 2";
+            bindings = <
+                &none &kp AT &none &none &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &none &none &to BASE
+                           &none &to BASE &none     &none &none &none
+            >;
+        };
+
+        bluetooth_layer {
+            display-name = "Bluetooth";
+            bindings = <
+                &none       &none         &none         &none         &none         &none         &none  &none        &none &none &none &none
+                &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 5  &none  &bootloader  &none &none &none &none
+                &none       &none         &none         &none         &none         &none         &none  &none        &none &none &none &none
+                           &none &to BASE &none     &none &none &none
+            >;
+        };
+    };
+};
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/reset.h>
+
+#define BASE 0
+#define FIRST 1
+#define SECOND 2
+#define FIRSTACCENT 3
+#define SECONDACCENT 4
+#define BLUETOOTH 5
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        base_layer {
+            display-name = "Base";
+            bindings = <
                 &kp ESC   &kp A    &kp Z    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I    &kp O    &kp P    &kp DEL
                 &kp TAB   &kp Q    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J    &kp K    &kp L    &kp M    &kp RET
                 &kp LGUI  &kp W    &kp X    &kp C    &kp V    &kp B    &kp N    &kp SEMI &kp COMMA &kp DOT  &kp COLON &sl FIRSTACCENT
