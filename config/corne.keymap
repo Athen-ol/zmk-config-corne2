@@ -31,7 +31,7 @@
                 &kp RA(N2)  &kp LS(M)   &kp RA(N3)     &kp RA(N9)          &kp N1         &kp RA(N6)     &kp EQUAL   &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp BSLH       &kp N4
                            &trans  &to BASE  &trans    &trans  &to SECOND  &trans  
             >;
-        };
+        }; 
 
         second_layer {
             display-name = "Second";
