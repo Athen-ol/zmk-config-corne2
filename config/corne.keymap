@@ -29,7 +29,7 @@
                 &kp ESC     &kp RA(N4)  &kp RA(EQUAL)  &kp N8  &kp RA(N5)  &kp RA(MINUS)  &kp LS(EQUAL)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp DEL
                 &kp TAB     &kp RA(N8)  &kp FSLH       &kp LS(DOT)         &kp N5         &kp MINUS      &kp N6      &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(COMMA)  &kp RET
                 &kp RA(N2)  &kp LS(M)   &kp RA(N3)     &kp RA(N9)          &kp N1         &kp RA(N6)     &kp EQUAL   &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp BSLH       &kp N4
-                           &trans  &to BASE  &trans    &trans  &to SECOND  &kp BSPC  
+                           &trans  &to BASE  &trans    &trans  &to SECOND  &trans  
             >;
         };
 
@@ -39,7 +39,7 @@
                 &kp ESC  &kp LS(MINUS)  &none   &none       &kp LS(RBRC)  &kp LS(SQT)   &kp C_VOLUME_UP    &kp C_MUTE  &kp UP    &to BLUETOOTH  &kp C_AL_CALCULATOR  &kp DEL
                 &kp TAB  &none          &kp N3  &kp RA(N0)  &kp NUBS  &kp LS(NUBS)  &kp C_VOLUME_DOWN  &kp LEFT    &kp DOWN  &kp RIGHT      &kp PSCRN            &kp RET
                 &kp F1   &kp F2         &kp F3  &kp F4      &kp F5    &kp F6        &kp F7             &kp F8      &kp F9    &kp F10        &kp F11              &kp F12
-                           &trans  &to BASE  &trans      &trans  &to FIRST  &kp BSPC
+                           &trans  &to BASE  &trans      &trans  &to FIRST  &trans
             >;
         };
 
