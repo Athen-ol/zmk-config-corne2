@@ -18,7 +18,7 @@
             bindings = <
                 &kp ESC   &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U  &kp I      &kp O    &kp P      &kp DEL
                 &kp TAB   &kp A    &kp S    &kp D    &kp F    &kp G    &kp H    &kp J  &kp K      &kp L    &kp SEMI   &kp RET
-                &kp LGUI  &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M  &kp COMMA  &kp LS(COMMA)  &kp DOT  &sl ACCENTS
+                &kp LGUI  &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M  &kp COMMA  &kp DOT  &kp LS(COMMA)  &sl ACCENTS
                            &sk LALT  &kp SPACE  &sk LCTRL    &kp BSPC  &to FIRST  &sk LSHFT
             >;
         };
@@ -36,7 +36,7 @@
         second_layer {
             display-name = "Second";
             bindings = <
-                &kp ESC  &kp LS(MINUS)  &none   &none       &kp LS(RBRC)  &kp LS(SQT)   &kp C_VOLUME_UP    &kp C_MUTE  &kp UP    &to BLUETOOTH  &kp C_AL_CALCULATOR  &kp DEL
+                &kp ESC  &kp LS(MINUS)  &none   &none       &kp RBRC  &kp LS(SQT)   &kp C_VOLUME_UP    &kp C_MUTE  &kp UP    &to BLUETOOTH  &kp C_AL_CALCULATOR  &kp DEL
                 &kp TAB  &none          &kp N3  &kp RA(N0)  &kp NUBS  &kp LS(NUBS)  &kp C_VOLUME_DOWN  &kp LEFT    &kp DOWN  &kp RIGHT      &kp PSCRN            &kp RET
                 &kp F1   &kp F2         &kp F3  &kp F4      &kp F5    &kp F6        &kp F7             &kp F8      &kp F9    &kp F10        &kp F11              &kp F12
                            &trans  &to BASE  &trans      &trans  &to FIRST  &trans
